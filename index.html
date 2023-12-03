@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta name="robots" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<meta name="format-detection" content="telephone=no">
+	<title>MIZ Website</title>
+	<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+	<link href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+   <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <div id="preloader">
+		<div class="lds-ripple">
+			<div></div>
+			<div></div>
+		</div>
+    </div>
+        <div class="content-body">
+			<div class="container-fluid">
+				<h1 class="text-center">Hello dears Asalam u Alikum Wa Rahmatullah, my name is Israr Zalmai. this the website I just publlished.</h1>
+				<p class="text-justify">This the our Automata Theory Home work. we built a program that can convert 0 to 1 and 1 to 0.</p>
+				<div class="col-xl-6 col-lg-6">
+					<div class="card">
+						<div class="card-header">
+							<h4 class="card-title">Enter sequence of 1s and 0s</h4>
+						</div>
+						<div class="card-body">
+							<div class="basic-form">
+								<form onsubmit="event.preventDefault(); convertInput();" >
+									<div class="mb-3">
+										<input type="number" class="form-control input-default" id="userInput" name="userInput" placeholder="Only 0 and 1" value="Mark" style="font-size: 30px;" required>
+									</div>
+									<button type="submit" class="btn btn-primary">Convert</button>
+								</form>
+								<div id="result" style="padding-top: 40px; font-size: 30px;"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+        </div>
+	<script>
+		function convertInput() {
+			var userInput = document.getElementById("userInput").value;
+			var convertedString = userInput.replace(/0/g, 'x').replace(/1/g, '0').replace(/x/g, '1');
+			document.getElementById("result").innerText = "Converted: " + convertedString;
+		}
+	</script>
+     <script src="vendor/global/global.min.js"></script>
+	<script src="vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+     <script src="js/custom.js"></script>
+	<script src="js/deznav-init.js"></script>
+	<script src="js/demo.js"></script>
+    <script src="js/styleSwitcher.js"></script>
+</body>
+</html>
